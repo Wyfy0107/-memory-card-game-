@@ -1,0 +1,27 @@
+.display {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display button {
+    width: 100px;
+    height: 50px;
+    background: #0e9aa7;
+    outline: none;
+    border-style: none;
+    box-shadow: 0 5px #00263b;
+    margin: 10px
+}
+
+.display button:hover {
+    background: #007892;
+    box-shadow: 0 3px #00263b;
+    transform: translateY(2px)
+}
+
+.display button:active {
+    background: #007892;
+    box-shadow: 0 0 #00263b;
+    transform: translateY(5px)
+}
