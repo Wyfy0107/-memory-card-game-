@@ -12,7 +12,6 @@ export default class App extends Component {
 		userClickedPattern: [],
 		displayText: 'Memory Card Game',
 		eventTarget: [],
-		time: 300,
 	};
 
 	shuffleCards = () => {
@@ -26,7 +25,7 @@ export default class App extends Component {
 		this.setState({
 			cards: cardDeck,
 			start: true,
-			displayText: `You have ${this.state.time} seconds left`,
+			displayText: 'Click only 2 cards at a time to check their number',
 		});
 	};
 
@@ -51,7 +50,7 @@ export default class App extends Component {
 					objectPattern[objectPattern.length - 2].style.fontSize = '0';
 					objectPattern[objectPattern.length - 2].style.transform =
 						'rotateY(180deg)';
-				}, 2000);
+				}, 1300);
 			}
 		} else if (pattern.length > 2) {
 			pattern.splice(0, 2);
@@ -76,8 +75,6 @@ export default class App extends Component {
 					text={this.state.displayText}
 					shuffle={this.shuffleCards}
 					start={this.state.start}
-					timer={this.playTime}
-					currentTime={this.state.time}
 				/>
 				<Hoc>{cardsList}</Hoc>
 			</div>
